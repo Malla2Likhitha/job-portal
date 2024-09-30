@@ -18,7 +18,11 @@ const Jobs = () => {
         return range.length === 1 ? [range[0], Infinity] : range;
     };
 
+    
+
     useEffect(() => {
+        // console.log('Searched Query:', searchedQuery); // Log searchedQuery
+
         // Handle the filtering based on the new structure of searchedQuery
         if (searchedQuery && Object.keys(searchedQuery).length > 0) {
             const filteredJobs = allJobs.filter((job) => {

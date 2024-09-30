@@ -17,9 +17,17 @@ const CategoryCarousel = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const searchJobHandler = (query) => {
-        dispatch(setSearchedQuery(query));
+        const searchedQuery = {
+            query: query,
+            Location: [],
+            Industry: [],
+            Salary: [],
+        };
+        console.log('Dispatching:', searchedQuery); // Log dispatched query
+        dispatch(setSearchedQuery(searchedQuery));
         navigate("/browse");
-    }
+    };
+    
 
     return (
         <div>
